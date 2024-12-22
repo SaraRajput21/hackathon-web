@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import CarDetails from "@/components/CarDetails";
 
 
@@ -165,9 +166,11 @@ const CarGridWithDetails: React.FC = () => {
               >
                 <h2 className="text-lg font-semibold text-gray-800">{car.name}</h2>
                 <p className="text-sm text-gray-500">{car.type}</p>
-                <img
+                <Image
                   src={car.image}
                   alt={car.name}
+                  width={400} // Add width
+                  height={200} // Add height
                   className="w-full h-40 object-contain my-4 cursor-pointer"
                   onClick={() => setSelectedCar(car)}
                 />
